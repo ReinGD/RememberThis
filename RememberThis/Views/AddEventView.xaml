@@ -78,7 +78,8 @@
             <RadioButton Grid.Column="1"
                          Margin = "10 0 0 0" 
                          GroupName = "Priority"
-                         VerticalContentAlignment="Center">
+                         VerticalContentAlignment="Center"
+                         IsChecked="{Binding PriorityArray[2], Mode=TwoWay}">
                 <Image Source="..\Resources\HighPriority.png" Width="32" Height="32"/>
 
                 <RadioButton.LayoutTransform>
@@ -89,7 +90,9 @@
             <RadioButton Grid.Column="2"
                          Margin = "10 0 0 0" 
                          GroupName = "Priority"
-                         VerticalContentAlignment="Center">
+                         VerticalContentAlignment="Center"
+                         IsChecked="{Binding PriorityArray[1], Mode=TwoWay}">
+                
                 <Image Source="..\Resources\MediumPriority.png" Width="32" Height="32"/>
 
                 <RadioButton.LayoutTransform>
@@ -100,7 +103,8 @@
             <RadioButton Grid.Column="3"
                          Margin = "10 0 0 0" 
                          GroupName = "Priority"
-                         VerticalContentAlignment="Center">
+                         VerticalContentAlignment="Center"
+                         IsChecked="{Binding PriorityArray[0], Mode=TwoWay}">
                 <Image Source="..\Resources\LowPriority.png" Width="32" Height="32"/>
 
                 <RadioButton.LayoutTransform>

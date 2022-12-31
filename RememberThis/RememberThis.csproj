@@ -11,6 +11,7 @@
     <None Remove="Resources\HighPriority.png" />
     <None Remove="Resources\LowPriority.png" />
     <None Remove="Resources\MediumPriority.png" />
+    <None Remove="Resources\RememberThese.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,6 +24,13 @@
     <Content Include="Resources\MediumPriority.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include="Resources\RememberThese.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
   </ItemGroup>
 
 </Project>

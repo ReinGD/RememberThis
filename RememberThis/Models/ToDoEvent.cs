@@ -5,8 +5,8 @@ namespace RememberThis.Models
     public class ToDoEvent : GDEvent
     {
         public bool completed { get; set; }
-        public ToDoEvent(string eventAction, DateTime startDate) 
-            : base(eventAction, startDate, EventType.ToDo)
+        public ToDoEvent(string eventAction, DateTime startDate, int priority) 
+            : base(eventAction, startDate, EventType.ToDo, (Priority)priority)
         {
             completed = false;
         }

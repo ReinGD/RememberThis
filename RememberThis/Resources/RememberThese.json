@@ -1,0 +1,20 @@
+[
+  {
+    "eventAction": "test calendar event 2",
+    "eventType": "0",
+    "priority": "2",
+    "startDate": "12/31/2022"
+  },
+  {
+    "eventAction": "test todo event",
+    "eventType": "1",
+    "priority": "0",
+    "startDate": "01/01/2023"
+  },
+  {
+    "eventAction": "test calendar event",
+    "eventType": "0",
+    "priority": "1",
+    "startDate": "01/05/2023"
+  }
+]

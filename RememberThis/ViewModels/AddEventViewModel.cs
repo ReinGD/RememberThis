@@ -16,6 +16,9 @@ namespace RememberThis.ViewModels
         private string _eventAction;
         private bool _repeats;
         private DateTime _startDate = DateTime.Now;
+        private bool[] _priorityArray = new bool[] { true, false, false };
+        private int _priority;
+
         public string EventAction
         {
             get
@@ -57,6 +60,29 @@ namespace RememberThis.ViewModels
 
         }
   
+        public bool[] PriorityArray 
+        {
+            get 
+            { 
+                return _priorityArray; 
+            }
+            set 
+            {
+                _priorityArray = value;
+                _priority = Array.IndexOf(_priorityArray, true);
+                OnPropertyChanged(nameof(PriorityArray));
+            }
+        }
+
+        public int Priority 
+        {
+            get
+            {
+                return Array.IndexOf(_priorityArray, true);
+            }
+
+        }
+
         public ICommand SubmitCommand { get; }
         public ICommand CancelCommand { get; }
 

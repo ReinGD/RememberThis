@@ -33,7 +33,7 @@ namespace RememberThis.Commands
 
         public override void Execute(object? parameter)
         {
-            ToDoEvent toDoEvent = new ToDoEvent(_toDoEventViewModel.EventAction, DateTime.Now.Date);
+            ToDoEvent toDoEvent = new ToDoEvent(_toDoEventViewModel.EventAction, DateTime.Now.Date, 0);
             _registrator.RemoveEvent(toDoEvent);
             _eventViewNavigationService.Navigate();
 

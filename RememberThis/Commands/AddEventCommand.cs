@@ -47,7 +47,7 @@ namespace RememberThis.Commands
                 try
                 {
                     //this is a todo event
-                    ToDoEvent toDoEvent = new ToDoEvent(_addEventViewModel.EventAction, _addEventViewModel.StartDate);
+                    ToDoEvent toDoEvent = new ToDoEvent(_addEventViewModel.EventAction, _addEventViewModel.StartDate, _addEventViewModel.Priority);
                     _registrator.AddEvent(toDoEvent);
                 }
                 catch (AddEventConflictException ex)
@@ -59,7 +59,7 @@ namespace RememberThis.Commands
             else 
             {
                 //this is a calendar event
-                CalendarEvent calendarEvent = new CalendarEvent(_addEventViewModel.EventAction, _addEventViewModel.StartDate);
+                CalendarEvent calendarEvent = new CalendarEvent(_addEventViewModel.EventAction, _addEventViewModel.StartDate, _addEventViewModel.Priority);
                 _registrator.AddEvent(calendarEvent);
 
             }

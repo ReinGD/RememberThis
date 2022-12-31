@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Data;
 
 namespace RememberThis.Models
 {
@@ -10,16 +11,23 @@ namespace RememberThis.Models
             ToDo
         }
 
+        public enum Priority : int
+        {
+            Low, Medium, High
+        }
+
         public string eventAction { get; }
         public DateTime startDate { get; }
 
         public EventType eventType { get; }
 
-        public GDEvent(string eventAction, DateTime startDate, EventType eventType)
+        public Priority priority { get; }
+        public GDEvent(string eventAction, DateTime startDate, EventType eventType, Priority priority )
         {
             this.eventAction = eventAction;
             this.startDate = startDate.Date;
             this.eventType = eventType;
+            this.priority = priority;
         }
 
 
